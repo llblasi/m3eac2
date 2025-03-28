@@ -77,7 +77,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
         #Podem crear un usuari pero usarem l'usuari isard, bper anar als usuaris i fem clic
         self.selenium.find_element(By.XPATH, '//a[@href="/admin/auth/user/"]').click()
 
-        #Comprovem si existeix el element th de classe fiel.__st__ i que conte el text grup_eac
+        #Comprovem si existeix el element th de classe field-username i que te el text isard
         usuari = self.selenium.find_element(By.XPATH, '//th[@class="field-username"]/a[text()="isard"]')
         usuari.click()
 
